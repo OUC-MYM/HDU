@@ -4,9 +4,13 @@ using namespace std;
 int main()
 {
     int num,sum;
-
-    while(cin >> num && num)
+    string str;
+    while(cin >> str && str[0]!='0')
     {
+        num=0;
+        int len=str.length();
+        for(int i=0; i<len; i++)
+            num=num+str[i]-'0';
         sum=num;
         while(num/10)
         {
